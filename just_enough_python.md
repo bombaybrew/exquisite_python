@@ -36,3 +36,10 @@ print(dict(zip(nums, list(range(len(nums))))))
 ```python
 max_num = max(max_num, 5)
 ```
+
+## variable swap
+```python
+a = 5
+b = 10
+a, b = b, a
+```
