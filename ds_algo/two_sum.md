@@ -18,3 +18,25 @@ class Solution:
     
         return result
 ```
+
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+
+        result = [0, 1]
+        nums_dict = {}
+        
+        for idx in range(len(nums)):
+            
+            if idx==0:
+                nums_dict[nums[idx]] = idx
+                continue
+                
+            if (target - nums[idx] in nums_dict):
+                return [idx, nums_dict[target-nums[idx]]]
+            
+            nums_dict[nums[idx]] = idx
+            
+    
+        return result
+```
