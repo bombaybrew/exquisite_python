@@ -23,20 +23,16 @@ class Solution:
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
-        result = [0, 1]
-        nums_dict = {}
+        seen = {}
         
-        for idx in range(len(nums)):
+        for key, value in enumerate(nums):
             
-            if idx==0:
-                nums_dict[nums[idx]] = idx
-                continue
+            compliment = target-value
                 
-            if (target - nums[idx] in nums_dict):
-                return [idx, nums_dict[target-nums[idx]]]
+            if compliment in seen:
+                return [key, seen[compliment]]
             
-            nums_dict[nums[idx]] = idx
+            seen[value] = key
             
-    
-        return result
+        raise ValueError('No two sum solution found')
 ```
