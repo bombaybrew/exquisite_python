@@ -37,9 +37,27 @@ print(dict(zip(nums, list(range(len(nums))))))
 max_num = max(max_num, 5)
 ```
 
-## variable swap
+## Variable swap
 ```python
 a = 5
 b = 10
 a, b = b, a
+```
+
+## Arrays
+```python
+heroes = ['deadpool', 'batman', 'wonder woman']
+heroes[0] = 'storm'
+
+print(heroes)
+# ['storm', 'batman', 'wonder woman']
+heroes.append('hulk')
+
+for hero in heroes:
+  print(hero)
+
+heroes.pop(1)
+
+print(heroes)
+# ['storm', 'wonder woman', 'hulk']
 ```
