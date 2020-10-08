@@ -23,6 +23,7 @@ class Solution:
                 hashSet[hash] = [item]
             
         return hashSet.values()
+```
 ```python
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
